@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app_project/Screesns/first_view.dart';
 void main() {
   runApp(const NotApp());
 }
@@ -7,7 +8,12 @@ class NotApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark
+      ),
+      home:const FirstView(),
+    );
 
         }
 }
