@@ -22,10 +22,24 @@ class ViewBody extends StatelessWidget {
               CustomIconbutten(),
             ],
           ),
-          Noteitem(),
+          Expanded(child: Noteslistview()),
         ],
       ),
     );
   }
 }
+class Noteslistview extends StatelessWidget {
+  const Noteslistview({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(itemBuilder: (context,index){
+      return const Padding(
+        padding:  EdgeInsets.only(bottom: 8),
+        child:  Noteitem(),
+      );
+    });
+  }
+}
+
+
 
