@@ -1,45 +1,29 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:notes_app_project/custom_widget/Custom_icon.dart';
-import 'package:notes_app_project/custom_widget/Note_item.dart';
+import 'package:notes_app_project/custom_widget/Custom_AppBar.dart';
+import 'package:notes_app_project/custom_widget/list_Item.dart';
 class ViewBody extends StatelessWidget {
   const ViewBody({super.key});
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.all(24),
+      padding: EdgeInsets.symmetric(horizontal: 24,),
       child:  Column(
         children: [
-          Row(
-            children: [
-              SizedBox(
-                height: 140,
+                SizedBox(
+                height: 70,
               ),
-              Text('Notes',style: TextStyle(
-                fontSize: 33,
-              ),),
-              Spacer(),
-              CustomIconbutten(),
-            ],
-          ),
+              CustomAppBar(),
           Expanded(child: Noteslistview()),
         ],
       ),
     );
   }
 }
-class Noteslistview extends StatelessWidget {
-  const Noteslistview({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(itemBuilder: (context,index){
-      return const Padding(
-        padding:  EdgeInsets.only(bottom: 8),
-        child:  Noteitem(),
-      );
-    });
-  }
-}
+
+
+
+
 
 
 
