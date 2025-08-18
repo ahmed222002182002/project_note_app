@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class CustomIconbutten extends StatelessWidget {
-  const CustomIconbutten({super.key});
+  const CustomIconbutten({ required this.icon});
+  final IconData icon;
   @override
   Widget build(BuildContext context) {
     return   Container(
@@ -11,7 +12,7 @@ class CustomIconbutten extends StatelessWidget {
         color: Colors.white.withOpacity(0.02),
         borderRadius: BorderRadius.circular(15),
       ),
-      child:  IconButton(onPressed: () {},  icon: const Icon(Icons.search),iconSize: 35,),
+      child:  IconButton(onPressed: () {},  icon: Icon(icon),iconSize: 35,),
     );
   }
 }
