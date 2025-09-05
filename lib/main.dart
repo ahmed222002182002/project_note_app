@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:notes_app_project/Screesns/first_view.dart';
-void main() {
+import 'package:notes_app_project/helper/helper.dart';
+import 'package:notes_app_project/model/note_model.dart';
+void main() async{
+   await Hive.initFlutter();
+  Hive.registerAdapter(NotemodelAdapter());
+ await Hive.openBox(kNotsBox);
   runApp(const NotApp());
 }
 class NotApp extends StatelessWidget {
-  const NotApp({super.key});
+  const NotApp();
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

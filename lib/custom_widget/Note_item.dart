@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:notes_app_project/Screesns/Edit_view.dart';
 class Noteitem extends StatelessWidget {
-  const Noteitem({super.key});
+  const Noteitem();
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

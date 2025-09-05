@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:notes_app_project/custom_widget/Custom_AppBar.dart';
 import 'package:notes_app_project/custom_widget/custom_textfield.dart';
 class EditView extends StatelessWidget {
-  const EditView({super.key});
+  const EditView();
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

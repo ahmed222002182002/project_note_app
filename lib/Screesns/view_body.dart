@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:notes_app_project/custom_widget/Custom_AppBar.dart';
 import 'package:notes_app_project/custom_widget/list_Item.dart';
 class ViewBody extends StatelessWidget {
-  const ViewBody({super.key});
+  const ViewBody();
 
   @override
   Widget build(BuildContext context) {

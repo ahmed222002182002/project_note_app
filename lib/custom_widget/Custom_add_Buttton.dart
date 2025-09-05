@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:notes_app_project/helper/helper.dart';
 class CustomAddButton extends StatelessWidget {
-  const CustomAddButton({super.key});
+  const CustomAddButton();
   @override
   Widget build(BuildContext context) {
     return  Container(
