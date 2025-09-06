@@ -1,12 +1,12 @@
-abstract class Stateallcubit{}
-class initalstate extends Stateallcubit{}
-class lodingstate extends Stateallcubit{
+abstract class Stateallt{}
+class Noteinitalstate extends Stateallt{}
+class lodingstate extends Stateallt{
 
 }
-class successtate extends Stateallcubit{
+class successtate extends Stateallt{
 
 }
-class failerstate extends Stateallcubit{
+class failerstate extends Stateallt{
    final String errormessage;
    failerstate( this.errormessage);
 }
