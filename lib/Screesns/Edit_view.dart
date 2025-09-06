@@ -18,7 +18,8 @@ class EditView extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
-            CustomTextfield(hint: 'Titel',),
+            CustomTextfield(hint: 'Titel',
+            ),
             SizedBox(
               height: 20,
             ),
