@@ -18,19 +18,14 @@ class NotApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (context)=> Notecubit()),
-      ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          brightness: Brightness.dark,
-          fontFamily: 'Poppins',
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        fontFamily: 'Poppins',
 
-        ),
-        home:const FirstView(),
       ),
+      home:const FirstView(),
     );
 
         }
