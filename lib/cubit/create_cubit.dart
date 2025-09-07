@@ -9,10 +9,11 @@ class Notecubit extends Cubit<Stateallt>{
     emit(lodingstate());
     try {
       var notebox = Hive.box<Notemodel>(kNotsBox);
-      emit(successtate());
       await notebox.add(note);
+      emit(successtate());
+
     }catch(e){
-      failerstate(e.toString());
+       emit (failerstate(e.toString()));
     }
   }
 }

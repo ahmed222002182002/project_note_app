@@ -10,7 +10,7 @@ void main() async{
   Bloc.observer=SimpleBloc();
    await Hive.initFlutter();
   Hive.registerAdapter(NotemodelAdapter());
- await Hive.openBox(kNotsBox);
+ await Hive.openBox<Notemodel>(kNotsBox);
   runApp(const NotApp());
 }
 class NotApp extends StatelessWidget {

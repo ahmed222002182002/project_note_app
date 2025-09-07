@@ -10,22 +10,20 @@ class ShowModelButtonSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Padding(
       padding:  const EdgeInsets.all(25),
-      child: SingleChildScrollView(
-        child:BlocConsumer<Notecubit, Stateallt>(
-            listener: (context, state) {
-              if(state is failerstate){
-                print('failed${state.errormessage}');
-              }
-              if(state is successtate){
-                Navigator.pop(context);
-              }
-            },
-            builder: (context, state) {
-              return ModalProgressHUD(
-                  inAsyncCall:state is lodingstate ? true:false,
-              child: const FormWidget());
+      child: BlocConsumer<Notecubit, Stateallt>(
+          listener: (context, state) {
+            if(state is failerstate){
+              print('failed${state.errormessage}');
             }
-        )
+            if(state is successtate){
+              Navigator.pop(context);
+            }
+          },
+          builder: (context, state) {
+            return ModalProgressHUD(
+                inAsyncCall:state is lodingstate ? true:false,
+            child:  const SingleChildScrollView(child:  FormWidget()));
+          }
       ),
     );
   }
