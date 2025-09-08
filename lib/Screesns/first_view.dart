@@ -8,12 +8,13 @@ class FirstView extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(onPressed: () {
         showModalBottomSheet(
+          isScrollControlled: true,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(24),
             ),
             context: context,
             builder:(context){
-              return const ShowModelButtonSheet();
+              return  const ShowModelButtonSheet();
             });
       },child: const Icon(Icons.add),),
       body: const ViewBody(),

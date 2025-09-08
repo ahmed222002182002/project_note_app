@@ -2,8 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:notes_app_project/helper/helper.dart';
 class CustomAddButton extends StatelessWidget {
-  const CustomAddButton({this.onTap});
+  const CustomAddButton({this.onTap,this.isloding=false});
    final void Function()? onTap;
+   final bool isloding;
   @override
   Widget build(BuildContext context) {
     return  GestureDetector(
@@ -15,7 +16,11 @@ class CustomAddButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
           color: kPrimaryColor,
         ),
-        child: const  Center(child: Text('Add',style: TextStyle(
+        child:   Center(
+          child:isloding?const CircularProgressIndicator(
+              color: Colors.black,
+          ):
+       const Text('Add',style: TextStyle(
           color: Colors.black,
           fontSize: 20,
           fontWeight: FontWeight.bold,
