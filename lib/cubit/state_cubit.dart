@@ -1,5 +1,5 @@
 abstract class Stateallt{}
-class Noteinitalstate extends Stateallt{}
+class initalstate extends Stateallt{}
 class lodingstate extends Stateallt{
 }
 class successtate extends Stateallt{

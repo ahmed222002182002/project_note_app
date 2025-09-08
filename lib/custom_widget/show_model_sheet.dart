@@ -9,8 +9,8 @@ class ShowModelButtonSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  BlocProvider(
-      create: (context)=>Notecubit(),
-      child: BlocConsumer<Notecubit, Stateallt>(
+      create: (context)=>Sheetecubit(),
+      child: BlocConsumer<Sheetecubit, Stateallt>(
           listener: (context, state) {
             if(state is failerstate){
               print('failed${state.errormessage}');

@@ -41,7 +41,7 @@ class _FormWidgetState extends State<FormWidget> {
           const SizedBox(
             height: 140,
           ),
-          BlocBuilder<Notecubit,Stateallt>(
+          BlocBuilder<Sheetecubit,Stateallt>(
             builder: (context, state) {
               return CustomAddButton(
                 isloding: state is lodingstate? true:false,
@@ -49,7 +49,7 @@ class _FormWidgetState extends State<FormWidget> {
                   if(formkey.currentState!.validate()){
                     formkey.currentState!.save();
                    var notemodel=Notemodel(title: titel!, subtitel: subtitel!, data: DateTime.now().toString(), color: Colors.orange.value);
-                    BlocProvider.of<Notecubit>(context).getnotecubit(notemodel);
+                    BlocProvider.of<Sheetecubit>(context).getnotecubit(notemodel);
                   }else{
                     autovalidateMode=AutovalidateMode.always;
                   }

@@ -3,8 +3,8 @@ import 'package:hive/hive.dart';
 import 'package:notes_app_project/cubit/state_cubit.dart';
 import 'package:notes_app_project/helper/helper.dart';
 import 'package:notes_app_project/model/note_model.dart';
-class Notecubit extends Cubit<Stateallt>{
-  Notecubit() : super(Noteinitalstate());
+class Sheetecubit extends Cubit<Stateallt>{
+  Sheetecubit() : super(initalstate());
   getnotecubit( Notemodel note)async{
     emit(lodingstate());
     try {
