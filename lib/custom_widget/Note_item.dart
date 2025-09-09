@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:notes_app_project/Screesns/Edit_view.dart';
+import 'package:notes_app_project/model/note_model.dart';
 class Noteitem extends StatelessWidget {
-  const Noteitem();
+  const Noteitem({required this.notemodel});
+  final Notemodel notemodel;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -11,21 +13,20 @@ class Noteitem extends StatelessWidget {
           return const EditView();
         }));
 
-
       },
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          color: Colors.orange,
+          color: Color(notemodel.color),
         ),
         child:  Padding(
           padding: const EdgeInsets.only(left: 12,top: 32,bottom: 24),
           child: Column(
               children: [
                 ListTile(
-                  title: const Padding(
-                    padding:  EdgeInsets.only(bottom: 16),
-                    child:  Text('Flutter tips',style: TextStyle(
+                  title:  Padding(
+                    padding:const  EdgeInsets.only(bottom: 16),
+                    child:  Text(notemodel.title,style: const TextStyle(
                       color: Colors.black,
                       fontSize: 35,
                     ),),
@@ -33,7 +34,7 @@ class Noteitem extends StatelessWidget {
 
                   subtitle: Padding(
                     padding: const EdgeInsets.only(right: 24),
-                    child: Text('Build your Career with Ahmed yasser',style: TextStyle(
+                    child: Text(notemodel.subtitel,style: TextStyle(
                       fontSize: 18,
                       color: Colors.black.withOpacity(0.2),
                     ),),
@@ -45,7 +46,7 @@ class Noteitem extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 200,top: 30,),
-                  child: Text('May 21,2022',style: TextStyle(
+                  child: Text(notemodel.data,style: TextStyle(
                     fontSize: 18,
                     color: Colors.black.withOpacity(0.2),
                   ),),
