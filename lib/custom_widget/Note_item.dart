@@ -1,18 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:notes_app_project/Screesns/Edit_view.dart';
+import 'package:notes_app_project/cubit/NotesCubit/cubit_notes.dart';
+import 'package:notes_app_project/helper/helper.dart';
 import 'package:notes_app_project/model/note_model.dart';
 class Noteitem extends StatelessWidget {
-  const Noteitem({required this.notemodel});
+  const Noteitem({required this.notemodel,required this.index});
   final Notemodel notemodel;
+  final int index;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
         Navigator.of(context).push(MaterialPageRoute(builder: (context){
-          return const EditView();
+          return  const EditView();
         }));
-
       },
       child: Container(
         decoration: BoxDecoration(
@@ -39,8 +43,12 @@ class Noteitem extends StatelessWidget {
                       color: Colors.black.withOpacity(0.2),
                     ),),
                   ),
-                  trailing: IconButton(onPressed: (){},
-                    icon:const Icon(Icons.delete_rounded) ,color:Colors.black,
+                  trailing: IconButton(onPressed: (){
+                    var notebox = Hive.box<Notemodel>(kNotsBox);
+                    notebox.deleteAt(index);
+                    BlocProvider.of<NoteCubit>(context).fetchNotes();
+                  },
+                    icon:const Icon(Icons.delete) ,color:Colors.black,
                   iconSize: 45,
                   ),
                 ),

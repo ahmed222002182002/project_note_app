@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:notes_app_project/custom_widget/Custom_AppBar.dart';
 import 'package:notes_app_project/custom_widget/custom_textfield.dart';
+import 'package:notes_app_project/model/note_model.dart';
 class EditView extends StatelessWidget {
   const EditView();
   @override

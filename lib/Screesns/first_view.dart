@@ -7,22 +7,19 @@ class FirstView extends StatelessWidget {
   const FirstView();
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context)=>NoteCubit(),
-      child: Scaffold(
-        floatingActionButton: FloatingActionButton(onPressed: () {
-          showModalBottomSheet(
-            isScrollControlled: true,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(24),
-              ),
-              context: context,
-              builder:(context){
-                return  const ShowModelButtonSheet();
-              });
-        },child: const Icon(Icons.add),),
-        body: const ViewBody(),
-      ),
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        showModalBottomSheet(
+          isScrollControlled: true,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(24),
+            ),
+            context: context,
+            builder:(context){
+              return  const ShowModelButtonSheet();
+            });
+      },child: const Icon(Icons.add),),
+      body: const ViewBody(),
     );
   }
 }
