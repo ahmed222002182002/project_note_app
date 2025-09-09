@@ -3,13 +3,13 @@ part'note_model.g.dart';
 @HiveType(typeId: 0)
 class Notemodel{
  @HiveField(0)
- final String title;
+  String title;
  @HiveField(1)
- final String subtitel;
+  String subtitel;
  @HiveField(2)
  final String data;
  @HiveField(3)
- final int color;
+  int color;
  Notemodel({
  required this.title,
   required this.subtitel,
