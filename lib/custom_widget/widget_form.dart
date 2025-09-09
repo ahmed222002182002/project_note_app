@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app_project/cubit/create_cubit.dart';
 import 'package:notes_app_project/cubit/state_cubit.dart';
 import 'package:notes_app_project/custom_widget/Custom_add_Buttton.dart';
+import 'package:notes_app_project/custom_widget/circle_view.dart';
 import 'package:notes_app_project/custom_widget/custom_textfield.dart';
 import 'package:notes_app_project/model/note_model.dart';
 import 'package:intl/intl.dart';
@@ -41,6 +42,7 @@ class _FormWidgetState extends State<FormWidget> {
           const SizedBox(
             height: 140,
           ),
+          const CriclList(),
           BlocBuilder<Sheetecubit,Stateallt>(
             builder: (context, state) {
               return CustomAddButton(
@@ -68,3 +70,6 @@ class _FormWidgetState extends State<FormWidget> {
     );
   }
 }
+
+
+
