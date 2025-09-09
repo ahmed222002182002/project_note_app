@@ -40,9 +40,12 @@ class _FormWidgetState extends State<FormWidget> {
             maxlines: 6,
           ),
           const SizedBox(
-            height: 140,
+            height: 50,
           ),
           const CriclList(),
+          const SizedBox(
+            height: 50,
+          ),
           BlocBuilder<Sheetecubit,Stateallt>(
             builder: (context, state) {
               return CustomAddButton(
@@ -63,6 +66,7 @@ class _FormWidgetState extends State<FormWidget> {
 
                 },
               );
+
             }
           ),
         ],

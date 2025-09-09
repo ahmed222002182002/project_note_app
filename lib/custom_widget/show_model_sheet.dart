@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:notes_app_project/cubit/NotesCubit/cubit_notes.dart';
 import 'package:notes_app_project/cubit/create_cubit.dart';
 import 'package:notes_app_project/cubit/state_cubit.dart';
@@ -24,7 +23,7 @@ class ShowModelButtonSheet extends StatelessWidget {
             return AbsorbPointer(
               absorbing: state is lodingstate?true:false,
               child: Padding(
-                padding:  EdgeInsets.only(top: 20,right: 20,left: 20,
+                padding:  EdgeInsets.only(top: 30,right: 20,left: 20,
                     bottom:MediaQuery.of(context).viewInsets.bottom,
 
                 ),
